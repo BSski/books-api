@@ -1,0 +1,34 @@
+version: v1.0
+name: Docker
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: Docker build
+    task:
+      jobs:
+        - name: Build
+          commands:
+            - 'echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin'
+            - 'docker pull $DOCKER_USERNAME/movies-api:latest || true'
+            - 'docker build --cache-from=$DOCKER_USERNAME/movies-api:latest -t $DOCKER_USERNAME/movies-api:latest .'
+            - 'docker push $DOCKER_USERNAME/movies-api:latest'
+      secrets:
+        - name: dockerhub
+      prologue:
+        commands:
+          - sem-version python 3.9
+          - checkout
+          - cache restore
+          - mkdir -p .pip_cache
+          - pip install --cache-dir .pip_cache -r requirements.txt
+          - cd movies
+          - python manage.py makemigrations
+          - python manage.py migrate
+          - cd ..
+promotions:
+  - name: Deploy to Heroku
+    pipeline_file: pipeline_3.yml
+    auto_promote:
+      when: branch = 'master' AND result = 'passed'

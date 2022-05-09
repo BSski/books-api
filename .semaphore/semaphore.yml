@@ -27,18 +27,18 @@ blocks:
       jobs:
         - name: Unit tests
           commands:
-            - cd movies
+            - cd booksapi
             - python manage.py makemigrations
             - python manage.py migrate
             - python manage.py test
         - name: Deploy check
           commands:
-            - cd movies
+            - cd booksapi
             - python manage.py check --deploy
         - name: Style check
           commands:
             - pip install black
-            - black --check movies/
+            - black --check booksapi/
 promotions:
   - name: Dockerize
     pipeline_file: pipeline_2.yml

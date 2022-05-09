@@ -11,9 +11,9 @@ blocks:
         - name: Build
           commands:
             - 'echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin'
-            - 'docker pull $DOCKER_USERNAME/movies-api:latest || true'
-            - 'docker build --cache-from=$DOCKER_USERNAME/movies-api:latest -t $DOCKER_USERNAME/movies-api:latest .'
-            - 'docker push $DOCKER_USERNAME/movies-api:latest'
+            - 'docker pull $DOCKER_USERNAME/books-api:latest || true'
+            - 'docker build --cache-from=$DOCKER_USERNAME/books-api:latest -t $DOCKER_USERNAME/books-api:latest .'
+            - 'docker push $DOCKER_USERNAME/books-api:latest'
       secrets:
         - name: dockerhub
       prologue:
@@ -23,7 +23,7 @@ blocks:
           - cache restore
           - mkdir -p .pip_cache
           - pip install --cache-dir .pip_cache -r requirements.txt
-          - cd movies
+          - cd booksapi
           - python manage.py makemigrations
           - python manage.py migrate
           - cd ..

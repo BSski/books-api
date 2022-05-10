@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-admin.site.site_url = '/books/'
+admin.site.site_url = "/books/"
 
 urlpatterns = [
-    path('2R7MFx6)Yc3Rd-W_+tTS5mXZQ8:/', admin.site.urls),
-    path('', include('booksapi.urls')),
+    path("2R7MFx6)Yc3Rd-W_+tTS5mXZQ8:/", admin.site.urls),
+    path("", include("booksapi.urls")),
 ]

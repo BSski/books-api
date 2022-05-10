@@ -9,23 +9,34 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-import os
 from pathlib import Path
+
+import os
+import sys
+from dotenv import load_dotenv  # pip install python-dotenv
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+dotenv_file = os.path.join(BASE_DIR, "..\.env")
+if os.path.isfile(dotenv_file):
+    load_dotenv(dotenv_file)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*oe)$a%(cpcz0t@$08df1zj(l-*x4g0-df(yms$8_qz3aklymh'
+SECRET_KEY = ""
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ["DEBUG"]
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "https://books-api-bsski.herokuapp.com/",
+]
 
 
 # Application definition
@@ -78,13 +89,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'booksapidb',
-        'USER': 'postgres',
-        'PASSWORD': 'KROTTON702!q',
-        'HOST': 'localhost',
-        'PORT': '5432',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -132,6 +139,22 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ORIGIN_WHITELIST = [
-    'https://localhost:3000',
-]
+#CSRF_TRUSTED_ORIGINS = ["https://books-api-bsski.herokuapp.com"]
+
+# CORS_ORIGIN_WHITELIST = [
+#     'https://localhost:3000',
+# ]
+
+
+import django_on_heroku
+
+django_on_heroku.settings(locals(), test_runner=False)
+
+if "OPTIONS" in DATABASES["default"]:
+    del DATABASES["default"]["OPTIONS"]["sslmode"]
+
+# if "CI" in os.environ:
+#     DATABASES["default"]["TEST"] = {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": "test.db",
+#     }

@@ -13,6 +13,14 @@ from rest_framework.request import Request
 
 @api_view(["GET"])
 def view_books_list(request: Request) -> Response:
+    """
+    A view for /books/ endpoint.
+    Possible parameters:
+    - /books?published_date=2022,
+    - /books?sort=published_date,
+    - /books?author=<author>,
+    - /books?author=<author1>&author=<author2> [&author=<author3>...].
+    """
     published_date = request.query_params.get("published_date")
     sorting_key = request.query_params.get("sort")
     author = request.query_params.getlist("author")

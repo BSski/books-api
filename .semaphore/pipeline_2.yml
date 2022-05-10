@@ -27,6 +27,9 @@ blocks:
           - python manage.py makemigrations
           - python manage.py migrate
           - cd ..
+      env_vars:
+        - name: DEBUG
+          value: '0'
 promotions:
   - name: Deploy to Heroku
     pipeline_file: pipeline_3.yml

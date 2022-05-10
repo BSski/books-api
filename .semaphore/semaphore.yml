@@ -20,7 +20,7 @@ blocks:
         - name: DEBUG
           value: '0'
         - name: SECRET_KEY
-          value: this_is_a_test-keyj0&wbl8ng)zemqby(abss_o1e2^p(cxn2xn*xuj-&@l9!-s
+          value: this_is_a_test_key_j0&wbl8ng)zemqby(abss_o1e2^p(cxn2xn*xuj-&@l9!-s
   - name: Tests
     task:
       prologue:

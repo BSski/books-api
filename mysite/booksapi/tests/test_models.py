@@ -16,7 +16,7 @@ class BookModelTest(TestCase):
             categories=["TestCategory"],
             average_rating=5.0,
             ratings_count=15,
-            thumbnail="www.test.pl/test",
+            thumbnail="http://www.test.com/test",
         )
 
     def test_book_str_equals_book_id(self):

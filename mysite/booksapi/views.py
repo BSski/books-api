@@ -1,4 +1,4 @@
-#import json
+# import json
 from django.shortcuts import get_object_or_404
 from django.core.exceptions import BadRequest
 from rest_framework.decorators import api_view
@@ -10,21 +10,12 @@ from .filters import AuthorSearchFilter
 from .utils import fetch_json_from_google_api
 from rest_framework.request import Request
 
-@api_view(['GET'])
-def view_books_list(request: Request) -> Response:
-    """
-    A view for /books/ endpoint.
-    Possible parameters:
-    - /books?published_date=2022,
-    - /books?sort=published_date,
-    - /books?author=<author>,
-    - /books?author=<author1>&author=<author2> [&author=<author3>...].
-    """
-    """
-    published_date = request.query_params.get('published_date')
-    sorting_key = request.query_params.get('sort')
-    author = request.query_params.getlist('author')
 
+@api_view(["GET"])
+def view_books_list(request: Request) -> Response:
+    published_date = request.query_params.get("published_date")
+    sorting_key = request.query_params.get("sort")
+    author = request.query_params.getlist("author")
 
     if published_date:
         books = Book.objects.all().filter(published_date__year=published_date)
@@ -32,56 +23,15 @@ def view_books_list(request: Request) -> Response:
         books = Book.objects.order_by(sorting_key)
     elif author:
         filter = AuthorSearchFilter()
-        books = filter.filter_queryset(request.query_params,
-            Book.objects.all())
+        books = filter.filter_queryset(request.query_params, Book.objects.all())
     else:
         books = Book.objects.all()
-    """
-    """
-    @api_view(['GET'])
-    def view_books_list(request):
-        published_date = request.query_params.get('published_date')
-        sorting_key = request.query_params.get('sort')
-        author = request.query_params.getlist('author')
-
-        if published_date:
-            books = Book.objects.all().filter(published_date__year=published_date)
-        elif sorting_key:
-            books = Book.objects.order_by(sorting_key)
-        elif author:
-            filter = AuthorSearchFilter()
-            books = filter.filter_queryset(request.query_params, Book.objects.all())
-        else:
-            books = Book.objects.all()
-
-        serializer = BookGetSerializer(books, many=True)
-        return Response(serializer.data)
-    """
-    params = request.query_params
-    match list(params.keys()):
-        case ['published_date']:
-            if year := params.get('published_date'):
-                books = Book.objects.all().filter(published_date__year=year)
-            else:
-                books = Book.objects.all()
-        case ['sort']:
-            if sort_param := params.get('sort'):
-                books = Book.objects.order_by(sort_param)
-            else:
-                books = Book.objects.all()
-        case ['author']:
-            filter = AuthorSearchFilter()
-            books = filter.filter_queryset(params, Book.objects.all())
-        case []:
-            books = Book.objects.all()
-        case _:
-            raise BadRequest('Invalid request.')
 
     serializer = BookGetSerializer(books, many=True)
     return Response(serializer.data)
 
 
-@api_view(['GET'])
+@api_view(["GET"])
 def view_book(request: Request, id: str) -> Response:
     """
     A view for /books/<str:id> endpoint.
@@ -91,22 +41,23 @@ def view_book(request: Request, id: str) -> Response:
     return Response(serializer.data)
 
 
-@api_view(['POST'])
+@api_view(["POST"])
 def post_books_to_database(request: Request) -> Response:
     """
     Adds 10 books from Google Books API to the app's database.
     Books are chosen based on a passed `q` parameter.
     """
-    books_json = fetch_json_from_google_api(request.data.get('q'))
-    if books_json['totalItems'] == 0:
-        return Response("No books found for this keyword.",
-            status=status.HTTP_404_NOT_FOUND)
+    books_json = fetch_json_from_google_api(request.data.get("q"))
+    if books_json["totalItems"] == 0:
+        return Response(
+            "No books found for this keyword.", status=status.HTTP_404_NOT_FOUND
+        )
 
     books = BookPostSerializer.create_books_list(books_json)
 
     for book_idx, book in enumerate(books):
         books[book_idx], created = Book.objects.update_or_create(
-            id=book['id'],
+            id=book["id"],
             defaults=book,
         )
 

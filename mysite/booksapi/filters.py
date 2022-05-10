@@ -1,32 +1,27 @@
-import operator
 from functools import reduce
+import operator
+
 from django.db import models
-from rest_framework import filters
-from django.http.request import QueryDict
 from django.db.models.query import QuerySet
+from django.http.request import QueryDict
+
+from rest_framework import filters
 
 
 class AuthorSearchFilter(filters.SearchFilter):
-    """
-    Enables querying the database for books of multiple authors
-    simultaneously.
-    """
+    """Enables querying the database for books of multiple authors simultaneously."""
 
     search_param = "author"
 
     def get_search_terms(self, query_params: QueryDict) -> list:
-        """
-        Returns authors extracted from the request and strips null characters.
-        """
+        """Returns authors extracted from the request and strips null characters."""
         params = query_params.getlist(self.search_param, "")
         for idx, param in enumerate(params):
             params[idx] = param.replace("\x00", "")
         return params
 
     def filter_queryset(self, query_params: QueryDict, queryset: QuerySet) -> QuerySet:
-        """
-        Returns books written by authors enumerated in the query.
-        """
+        """Returns books written by authors enumerated in the query."""
         search_fields = ["authors"]
         search_terms = self.get_search_terms(query_params)
         if not search_fields or not search_terms:

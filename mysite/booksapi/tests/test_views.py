@@ -1,11 +1,7 @@
-from datetime import date
-
 from django.test import TestCase
 from django.urls import reverse
 
 from booksapi.models import Book
-
-# coverage run --source='booksapi' manage.py test && coverage report & coverage html
 
 
 class BaseTest(TestCase):

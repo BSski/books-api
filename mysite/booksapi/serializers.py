@@ -1,6 +1,8 @@
-from rest_framework import serializers
-from .models import Book
 import datetime
+
+from rest_framework import serializers
+
+from .models import Book
 
 
 class BookGetSerializer(serializers.ModelSerializer):
@@ -58,9 +60,7 @@ class BookPostSerializer(serializers.ModelSerializer):
 
     @classmethod
     def create_books_list(cls, books_json: dict) -> list:
-        """
-        Returns a list of dicts with information selected from a JSON.
-        """
+        """Returns a list of dicts with information selected from a JSON."""
         books_to_post = []
         for json_book in books_json["items"]:
             info = json_book["volumeInfo"]

@@ -1,20 +1,20 @@
-# import json
 from django.shortcuts import get_object_or_404
-from django.core.exceptions import BadRequest
+
+from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from rest_framework import status
+from rest_framework.request import Request
+
+from .filters import AuthorSearchFilter
 from .models import Book
 from .serializers import BookGetSerializer, BookPostSerializer
-from .filters import AuthorSearchFilter
 from .utils import fetch_json_from_google_api
-from rest_framework.request import Request
 
 
 @api_view(["GET"])
 def view_books_list(request: Request) -> Response:
     """
-    A view for /books/ endpoint.
+    A view for /books endpoint.
     Possible parameters:
     - /books?published_date=2022,
     - /books?sort=published_date,
@@ -41,9 +41,7 @@ def view_books_list(request: Request) -> Response:
 
 @api_view(["GET"])
 def view_book(request: Request, id: str) -> Response:
-    """
-    A view for /books/<str:id> endpoint.
-    """
+    """A view for /books/<str:id> endpoint."""
     book = get_object_or_404(Book, pk=id)
     serializer = BookGetSerializer(book, many=False)
     return Response(serializer.data)
@@ -53,7 +51,7 @@ def view_book(request: Request, id: str) -> Response:
 def post_books_to_database(request: Request) -> Response:
     """
     Adds 10 books from Google Books API to the app's database.
-    Books are chosen based on a passed `q` parameter.
+    Books are chosen based on a passed "q" parameter.
     """
     books_json = fetch_json_from_google_api(request.data.get("q"))
     if books_json["totalItems"] == 0:

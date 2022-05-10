@@ -1,8 +1,5 @@
-from datetime import date
-
-from django.test import TestCase
-from django.urls import reverse
 from django.http import QueryDict
+from django.test import TestCase
 
 from booksapi.filters import AuthorSearchFilter
 from booksapi.models import Book

@@ -3,4 +3,4 @@
 if [ -n "$DJANGO_SUPERUSER_USERNAME" ] && [ -n "$DJANGO_SUPERUSER_PASSWORD" ] ; then
     (cd mysite; python manage.py createsuperuser --no-input)
 fi
-(cd mysite; gunicorn movies.wsgi:application --bind 0.0.0.0:$PORT --workers 3)
+(cd mysite; gunicorn mysite.wsgi:application --bind 0.0.0.0:$PORT --workers 3)

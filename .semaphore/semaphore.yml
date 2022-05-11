@@ -49,6 +49,12 @@ blocks:
           value: '0'
         - name: SECRET_KEY
           value: this_is_a_test_key_j0&wbl8ng)zemqby(abss_o1e2^p(cxn2xn*xuj-&@l9!-s
+        - name: CSRF_COOKIE_SECURE
+          value: '1'
+        - name: SESSION_COOKIE_SECURE
+          value: '1'
+        - name: SECURE_SSL_REDIRECT
+          value: '1'
 promotions:
   - name: Dockerize
     pipeline_file: pipeline_2.yml

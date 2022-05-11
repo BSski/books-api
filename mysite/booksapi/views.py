@@ -30,8 +30,8 @@ def view_books_list(request: Request) -> Response:
     elif sorting_key:
         books = Book.objects.order_by(sorting_key)
     elif author:
-        filter = AuthorSearchFilter()
-        books = filter.filter_queryset(request.query_params, Book.objects.all())
+        author_filter = AuthorSearchFilter()
+        books = author_filter.filter_queryset(request.query_params, Book.objects.all())
     else:
         books = Book.objects.all()
 
@@ -40,9 +40,9 @@ def view_books_list(request: Request) -> Response:
 
 
 @api_view(["GET"])
-def view_book(request: Request, id: str) -> Response:
-    """A view for /books/<str:id> endpoint."""
-    book = get_object_or_404(Book, pk=id)
+def view_book(request: Request, book_id: str) -> Response:
+    """A view for /books/<str:book_id> endpoint."""
+    book = get_object_or_404(Book, pk=book_id)
     serializer = BookGetSerializer(book, many=False)
     return Response(serializer.data)
 
@@ -70,5 +70,4 @@ def post_books_to_database(request: Request) -> Response:
     serializer = BookPostSerializer(data=books, many=True)
     if serializer.is_valid():
         serializer.save()
-
     return Response(serializer.data, status=status.HTTP_201_CREATED)

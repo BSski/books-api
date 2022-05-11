@@ -77,7 +77,7 @@ class BookPostSerializer(serializers.ModelSerializer):
     def fill_incomplete_dates(books_to_post: list) -> list:
         """
         Processes publishing dates of books.
-        YYYY-MM changes to YYYY-MM-01 and YYYY changes to YYYY-01-01.
+        Changes YYYY-MM to YYYY-MM-01 and YYYY to YYYY-01-01.
         """
         books_to_post = books_to_post[:]
         for book in books_to_post:

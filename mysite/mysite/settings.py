@@ -143,6 +143,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CSRF_TRUSTED_ORIGINS = ["https://books-api-bsski.herokuapp.com"]
 
+CSRF_COOKIE_SECURE = os.environ["CSRF_COOKIE_SECURE"]
+SESSION_COOKIE_SECURE = os.environ["SESSION_COOKIE_SECURE"]
+SECURE_SSL_REDIRECT = os.environ["SECURE_SSL_REDIRECT"]
+
 
 django_on_heroku.settings(locals(), test_runner=False)
 

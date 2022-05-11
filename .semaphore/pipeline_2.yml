@@ -34,4 +34,4 @@ promotions:
   - name: Deploy to Heroku
     pipeline_file: pipeline_3.yml
     auto_promote:
-      when: branch = 'development' AND result = 'passed'
+      when: branch = 'staging' AND result = 'passed'

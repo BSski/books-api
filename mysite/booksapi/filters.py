@@ -21,7 +21,7 @@ class AuthorSearchFilter(filters.SearchFilter):
         return params
 
     def filter_queryset(self, query_params: QueryDict, queryset: QuerySet) -> QuerySet:
-        """Returns books written by authors enumerated in the query."""
+        """Finds books written by the authors enumerated in the query."""
         search_fields = ["authors"]
         search_terms = self.get_search_terms(query_params)
         if not search_fields or not search_terms:

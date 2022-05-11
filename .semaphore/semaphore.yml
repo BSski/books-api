@@ -16,6 +16,7 @@ blocks:
             - cache restore
             - pip install --cache-dir .pip_cache -r requirements.txt
             - cache store
+<<<<<<< HEAD
       env_vars:
 <<<<<<< HEAD
         - name: ''
@@ -26,6 +27,9 @@ blocks:
         - name: SECRET_KEY
           value: this_is_a_test_key_j0&wbl8ng)zemqby(abss_o1e2^p(cxn2xn*xuj-&@l9!-s
 >>>>>>> development
+=======
+      env_vars: []
+>>>>>>> a3070fe96fa695daf49c9ae89e21f438e57da9c3
   - name: Tests
     task:
       prologue:
@@ -58,4 +62,4 @@ promotions:
   - name: Dockerize
     pipeline_file: pipeline_2.yml
     auto_promote:
-      when: branch = 'development' AND result = 'passed'
+      when: branch = 'staging' AND result = 'passed'

@@ -16,11 +16,7 @@ blocks:
             - cache restore
             - pip install --cache-dir .pip_cache -r requirements.txt
             - cache store
-      env_vars:
-        - name: DEBUG
-          value: '0'
-        - name: SECRET_KEY
-          value: this_is_a_test_key_j0&wbl8ng)zemqby(abss_o1e2^p(cxn2xn*xuj-&@l9!-s
+      env_vars: []
   - name: Tests
     task:
       prologue:
@@ -48,7 +44,13 @@ blocks:
         - name: DEBUG
           value: '0'
         - name: SECRET_KEY
-          value: testkey
+          value: this_is_a_test_key_j0&wbl8ng)zemqby(abss_o1e2^p(cxn2xn*xuj-&@l9!-s
+        - name: CSRF_COOKIE_SECURE
+          value: '1'
+        - name: SESSION_COOKIE_SECURE
+          value: '1'
+        - name: SECURE_SSL_REDIRECT
+          value: '1'
 promotions:
   - name: Dockerize
     pipeline_file: pipeline_2.yml

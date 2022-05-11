@@ -19,9 +19,7 @@ class BooksListHttpMethodsTest(BaseTest):
 
     def test_cant_use_post_method_to_books_list_endpoint(self):
         response = self.client.post(
-            self.books_list_url,
-            format="text/html",
-            secure=True
+            self.books_list_url, format="text/html", secure=True
         )
         self.assertEqual(response.status_code, 405)
 
@@ -31,9 +29,7 @@ class BooksListHttpMethodsTest(BaseTest):
 
     def test_cant_use_delete_method_to_books_list_endpoint(self):
         response = self.client.delete(
-            self.books_list_url,
-            format="text/html",
-            secure=True
+            self.books_list_url, format="text/html", secure=True
         )
         self.assertEqual(response.status_code, 405)
 
@@ -45,22 +41,19 @@ class BooksListViewTest(BaseTest):
 
     def test_can_filter_books_by_publishing_date(self):
         response = self.client.get(
-            f"{self.books_list_url}?published_date=2022",
-            secure=True
+            f"{self.books_list_url}?published_date=2022", secure=True
         )
         self.assertEqual(response.status_code, 200)
 
     def test_can_sort_books_by_publishing_date(self):
         response = self.client.get(
-            f"{self.books_list_url}?sort=published_date",
-            secure=True
+            f"{self.books_list_url}?sort=published_date", secure=True
         )
         self.assertEqual(response.status_code, 200)
 
     def test_can_sort_books_by_negative_publishing_date(self):
         response = self.client.get(
-            f"{self.books_list_url}?sort=-published_date",
-            secure=True
+            f"{self.books_list_url}?sort=-published_date", secure=True
         )
         self.assertEqual(response.status_code, 200)
 
@@ -70,8 +63,7 @@ class BooksListViewTest(BaseTest):
 
     def test_can_filter_books_by_many_authors(self):
         response = self.client.get(
-            f"{self.books_list_url}?author=Test1&author=Test2",
-            secure=True
+            f"{self.books_list_url}?author=Test1&author=Test2", secure=True
         )
         self.assertEqual(response.status_code, 200)
 
@@ -93,9 +85,7 @@ class SingleBookViewTest(BaseTest):
 class PostBooksHttpMethodsTest(BaseTest):
     def test_can_use_post_method_to_post_books_endpoint(self):
         response = self.client.post(
-            self.post_books_url,
-            format="text/html",
-            secure=True
+            self.post_books_url, format="text/html", secure=True
         )
         self.assertEqual(response.status_code, 201)
 
@@ -109,9 +99,7 @@ class PostBooksHttpMethodsTest(BaseTest):
 
     def test_cant_use_delete_method_to_post_books_endpoint(self):
         response = self.client.delete(
-            self.post_books_url,
-            format="text/html",
-            secure=True
+            self.post_books_url, format="text/html", secure=True
         )
         self.assertEqual(response.status_code, 405)
 
@@ -125,8 +113,9 @@ class PostBooksTest(BaseTest):
 
     def test_can_not_find_any_books_with_keyword(self):
         response = self.client.post(
-            self.post_books_url, {"q": "pppwwwtttrrrmmm"},
+            self.post_books_url,
+            {"q": "pppwwwtttrrrmmm"},
             format="text/html",
-            secure=True
+            secure=True,
         )
         self.assertEqual(response.status_code, 404)

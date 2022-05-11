@@ -12,10 +12,10 @@
 
 old badges:
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/BSski/discord-reminder-bot/blob/main/LICENSE)
-[![Demo Uptime](https://img.shields.io/uptimerobot/ratio/m791506013-6a0d048e5d48a3500b5e722e)](https://discord.gg/8GWc9xNjX8)
 
 done badges:
 [![Build Status](https://bsski.semaphoreci.com/badges/books-api/branches/main.svg?style=shields&key=bbf61a13-a31b-4766-99d2-8a8817119f9a)](https://bsski.semaphoreci.com/projects/books-api)
+[![Demo Uptime](https://img.shields.io/uptimerobot/ratio/7/m791716455-288255922d4aaa0af095c195)
 
 </div>
 

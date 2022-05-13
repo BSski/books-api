@@ -53,7 +53,8 @@ test
 </div>
 
 
-## 🛠️ Deployment
+🛠️ Deployment
+-------------
 
 To self-host this project for free:
 1. Create a new application on https://discord.com/developers/applications.
@@ -94,7 +95,8 @@ To run this project, you have to set up the following environment variables (the
 `LOCAL_TIMEZONE=US/Eastern`
 
 
-## ❗ Commands
+❗ Commands
+-------------
 
 ```
 !remind me of X on 05.07.22 12:00
@@ -122,7 +124,9 @@ To run this project, you have to set up the following environment variables (the
 - Deletes a reminder
 
 
-## 🚀 Additional features
+🚀 Additional features
+-------------
+
 Besides the commands behaviour, the bot also:
 - validates user's profile (puts the user on a cooldown if needed),
 - validates message content,
@@ -140,11 +144,12 @@ Besides the commands behaviour, the bot also:
 - mentioning other users in advance.
 
 
-## :sos: Support
+:sos: Support
+-------------
 - <contact.bsski@gmail.com>
 
 
-## :construction_worker: Author
-
+:construction_worker: Author
+-------------
 - [@BSski](https://www.github.com/BSski)
 

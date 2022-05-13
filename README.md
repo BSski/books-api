@@ -44,8 +44,6 @@ test
 -------------
 
 
-## 🛠️ Deployment
-
 <div markdown="1" align="center">    
 
 ![Commands Screenshot](https://i.imgur.com/HSasIdd.png)
@@ -58,21 +56,12 @@ test
 
 To self-host this project for free:
 1. Create a new application on https://discord.com/developers/applications.
-2. Create a new bot in the application.
-3. Add the bot to a server and get the bot's token and the server's target bot channel's ID.
-4. Create a free cluster on https://www.mongodb.com/ and get its log in link and password. Customize the link to the format given below.
-5. Create a database and three collections inside it. First one is for future reminders, second one is for past reminders, third one is for user profiles.
-6. Create a project on https://replit.com and connect it with your fork of this repository (or manually copy the files there).
-7. Create replit environment variables described below and fill them with your values.
-8. Run the code on replit and copy the link of the created website.
-9. Create a new monitor on https://uptimerobot.com/ on the link of your aforementioned website. Keep the other parameters at default values.
 
 🎇 Done! The bot is ready to use. 🎇
 
-Feel free to contact me if you have any questions :slightly_smiling_face:
 
-
-## :closed_lock_with_key: Environment Variables
+:closed_lock_with_key: Environment Variables
+-------------
 
 To run this project, you have to set up the following environment variables (the values below are exemplary).
 

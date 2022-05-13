@@ -37,7 +37,9 @@ done badges:
 </p>
 
 
-## :camera: Screenshots
+:camera: Screenshots
+=======================
+
 <div markdown="1" align="center">    
 
 ![Commands Screenshot](https://i.imgur.com/HSasIdd.png)

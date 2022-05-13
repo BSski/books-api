@@ -5,9 +5,9 @@
 </div>
 
 <p align="center">
-  :hourglass::date: Simple Discord Reminder Bot :date::hourglass:
-  ===================
+  BooksAPI recruitment task
 </p>
+
 
 <div markdown="1" align="center">
 
@@ -19,6 +19,7 @@ done badges:
 [![Demo Uptime](https://img.shields.io/uptimerobot/ratio/7/m791716455-288255922d4aaa0af095c195)](https://books-api-bsski.herokuapp.com/)
 
 </div>
+
 
 <p align="center">
   Have you ever wanted to get mentioned on Discord on a certain time?<br>

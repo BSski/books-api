@@ -5,7 +5,7 @@
 </div>
 
 <p align="center">
-  BooksAPI recruitment task
+  <h2 align="center">BooksAPI recruitment task</h2>
 </p>
 
 

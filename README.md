@@ -6,7 +6,7 @@
 </h3>
 
 <p align="center">
-  > Live demo [_here_](https://www.books-api-bsski.herokuapp.com).
+  https://www.books-api-bsski.herokuapp.com
 </p>
 
 

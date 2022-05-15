@@ -65,13 +65,8 @@ Furthermore, the API is deployed on Heroku from a Docker image using a CI/CD Sem
 ## :arrow_up: Room for improvement
 
 Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
-
-To do:
-- Feature to be added 1
-- Feature to be added 2
-
+- sorting books with incomplete date as if they were written 1st of January, but displaying year only,
+- more tests.
 
 ## :telephone_receiver: Contact
 - <contact.bsski@gmail.com>

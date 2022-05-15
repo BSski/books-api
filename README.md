@@ -73,12 +73,11 @@ To do:
 
 
 ## ICON HERE Contact
--------------
 - <contact.bsski@gmail.com>
 
 
-:construction_worker: Author
--------------
+## :construction_worker: Author
+
 - [@BSski](https://www.github.com/BSski)
 
 

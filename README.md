@@ -57,13 +57,12 @@ The recruitment task demanded such features and all are provided in a required f
 - accessing /books/<book_id> displays details of a single book of id <book_id>,
 - sending a POST request to /db with a "q" keyword adds 10 books to the API's database; the books come from a query sent to the Google Books API with the passed keyword and the operation will update existing ones if there are such.
 
-Furthermore, the API is deployed on Heroku from a Docker image using a CI/CD SemaphoreCI pipeline.
+Furthermore, the API is deployed on Heroku from a Docker image using a CI/CD SemaphoreCI pipeline:
 
 ![CI/CD screenshot](https://i.imgur.com/sRgpdtM.png)
 
-## :arrow_up: Room for Improveme
-nt
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
+
+## :arrow_up: Room for Improvement
 
 Room for improvement:
 - Improvement to be done 1

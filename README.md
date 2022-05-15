@@ -21,9 +21,9 @@
 
 
 
-## Table of Contents
+## Table of contents
 * [Project description](#project-description)
-* [Technologies used](#technologies-used)
+* [Technologies used](#🛠️-technologies-used)
 * [Features](#features)
 * [Room for improvement](#room-for-improvement)
 * [Contact](#contact)
@@ -31,12 +31,12 @@
 * [License](#license)
 
 
-## General Information
+## Project description
 This is a project that was a previous recruitment task of mine. I fixed the points mentioned in the feedback and added dockerization, a CI/CD pipeline on SemaphoreCI, gunicorn, and changed hosting from pythonanywhere to heroku.
 The project is a books API. It provides a feature to upload books from Google Books API to the database, and browse them, either with filters or without them.
 
 
-## 🛠️ Technologies Used
+## 🛠️ Technologies used
 - Python 3.9.12
 - Django 4.0.3
 - Django REST Framework 3.13.1 
@@ -61,7 +61,7 @@ Furthermore, the API is deployed on Heroku from a Docker image using a CI/CD Sem
 ![CI/CD screenshot](https://i.imgur.com/sRgpdtM.png)
 
 
-## :arrow_up: Room for Improvement
+## :arrow_up: Room for improvement
 
 Room for improvement:
 - Improvement to be done 1

@@ -22,10 +22,10 @@
 
 
 ## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
+* [Project description](#project-description)
+* [Technologies used](#technologies-used)
 * [Features](#features)
-* [Room for Improvement](#room-for-improvement)
+* [Room for improvement](#room-for-improvement)
 * [Contact](#contact)
 * [Author](#author)
 * [License](#license)
@@ -45,7 +45,6 @@ The project is a books API. It provides a feature to upload books from Google Bo
 - Docker
 - SemaphoreCI
 - Heroku
-- Coverage
 
 
 ## 🚀 Features

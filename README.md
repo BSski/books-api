@@ -22,21 +22,21 @@
 
 
 ## Table of contents
-* [Project description](#project-description)
-* [Technologies used](#🛠️-technologies-used)
-* [Features](#features)
-* [Room for improvement](#room-for-improvement)
-* [Contact](#contact)
+* [Project description](#scroll-project-description)
+* [Technologies used](#hammer-technologies-used)
+* [Features](#rocket-features)
+* [Room for improvement](#arrow_up-room-for-improvement)
+* [Contact](#telephone_receiver-contact)
 * [Author](#construction_worker-author)
-* [License](#license)
+* [License](#unlock-license)
 
 
-## Project description
+## :scroll: Project description
 This is a project that was a previous recruitment task of mine. I fixed the points mentioned in the feedback and added dockerization, a CI/CD pipeline on SemaphoreCI, gunicorn, and changed hosting from pythonanywhere to heroku.
 The project is a books API. It provides a feature to upload books from Google Books API to the database, and browse them, either with filters or without them.
 
 
-## 🛠️ Technologies used
+## :hammer: Technologies used
 - Python 3.9.12
 - Django 4.0.3
 - Django REST Framework 3.13.1 
@@ -47,7 +47,7 @@ The project is a books API. It provides a feature to upload books from Google Bo
 - Heroku
 
 
-## 🚀 Features
+## :rocket: Features
 The recruitment task demanded such features and all are provided in a required format:
 - accessing /books displays all stored books,
 - accessing /books?published_date=1995 displays stored books published in a certain year,
@@ -72,7 +72,7 @@ To do:
 - Feature to be added 2
 
 
-## ICON HERE Contact
+## :telephone_receiver: Contact
 - <contact.bsski@gmail.com>
 
 
@@ -81,5 +81,5 @@ To do:
 - [@BSski](https://www.github.com/BSski)
 
 
-## License
+## :unlock: License
 MIT

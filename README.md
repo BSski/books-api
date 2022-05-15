@@ -6,7 +6,7 @@
 </h3>
 
 <p align="center">
-  https://www.books-api-bsski.herokuapp.com
+  https://books-api-bsski.herokuapp.com/
 </p>
 
 

@@ -28,18 +28,18 @@ blocks:
       jobs:
         - name: Unit tests
           commands:
-            - cd mysite
+            - cd api
             - python manage.py makemigrations
             - python manage.py migrate
             - python manage.py test
         - name: Deploy check
           commands:
-            - cd mysite
+            - cd api
             - python manage.py check --deploy
         - name: Style check
           commands:
             - pip install black
-            - black --check mysite/
+            - black --check api/
       env_vars:
         - name: DEBUG
           value: '0'

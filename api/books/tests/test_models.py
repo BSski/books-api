@@ -2,7 +2,7 @@ from datetime import date
 
 from django.test import TestCase
 
-from booksapi.models import Book
+from books.models import Book
 
 
 class BookModelTest(TestCase):

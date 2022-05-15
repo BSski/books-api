@@ -6,8 +6,9 @@
 </h3>
 
 <p align="center">
-  > Live demo [_here_](https://www.books-api-bsski.herokuapp.com).
+  https://www.books-api-bsski.herokuapp.com
 </p>
+
 
 
 <div markdown="1" align="center">
@@ -19,8 +20,9 @@ done badges:
 [![Build Status](https://bsski.semaphoreci.com/badges/books-api/branches/main.svg?style=shields&key=bbf61a13-a31b-4766-99d2-8a8817119f9a)](https://bsski.semaphoreci.com/projects/books-api)
 [![Demo Uptime](https://img.shields.io/uptimerobot/ratio/7/m791716455-288255922d4aaa0af095c195)](https://books-api-bsski.herokuapp.com/)
 
-
 </div>
+
+
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -33,14 +35,14 @@ done badges:
 
 
 ## General Information
-This is a project that was an old recruitment task of mine. I fixed points mentioned in the feedback and added dockerization and a CI/CD pipeline.
+This is a project that was a previous recruitment task of mine. I fixed the points mentioned in the feedback and added dockerization, a CI/CD pipeline on SemaphoreCI, gunicorn, and changed hosting from pythonanywhere to heroku.
 The project is a books API. It provides a feature to upload books from Google Books API to the database, and browse them, either with filters or without them.
 
 
 ## 🛠️ Technologies Used
 - Django 4.0.3
 - Django REST Framework 3.13.1 
-- PostgreSQL
+- PostgreSQL 14.2
 - Gunicorn 20.1.0
 - Docker
 - SemaphoreCI

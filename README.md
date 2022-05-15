@@ -65,7 +65,7 @@ Furthermore, the API is deployed on Heroku from a Docker image using a CI/CD Sem
 ## :arrow_up: Room for improvement
 
 Room for improvement:
-- sorting books with incomplete date as if they were written 1st of January, but displaying year only,
+- sorting books with incomplete date as if they were written 1st of January, but displaying year only, instead of the current solution,
 - more tests.
 
 ## :telephone_receiver: Contact

@@ -5,8 +5,9 @@
 </div>
 
 <p align="center">
-  <h2 align="center">:hourglass::date: Simple Discord Reminder Bot :date::hourglass:</h2>
+  <h2 align="center">BooksAPI recruitment task</h2>
 </p>
+
 
 <div markdown="1" align="center">
 
@@ -18,6 +19,7 @@ done badges:
 [![Demo Uptime](https://img.shields.io/uptimerobot/ratio/7/m791716455-288255922d4aaa0af095c195)](https://books-api-bsski.herokuapp.com/)
 
 </div>
+
 
 <p align="center">
   Have you ever wanted to get mentioned on Discord on a certain time?<br>
@@ -37,7 +39,13 @@ done badges:
 </p>
 
 
-## :camera: Screenshots
+:camera: Screenshots
+=======================
+
+test
+-------------
+
+
 <div markdown="1" align="center">    
 
 ![Commands Screenshot](https://i.imgur.com/HSasIdd.png)
@@ -45,25 +53,17 @@ done badges:
 </div>
 
 
-## 🛠️ Deployment
+🛠️ Deployment
+-------------
 
 To self-host this project for free:
 1. Create a new application on https://discord.com/developers/applications.
-2. Create a new bot in the application.
-3. Add the bot to a server and get the bot's token and the server's target bot channel's ID.
-4. Create a free cluster on https://www.mongodb.com/ and get its log in link and password. Customize the link to the format given below.
-5. Create a database and three collections inside it. First one is for future reminders, second one is for past reminders, third one is for user profiles.
-6. Create a project on https://replit.com and connect it with your fork of this repository (or manually copy the files there).
-7. Create replit environment variables described below and fill them with your values.
-8. Run the code on replit and copy the link of the created website.
-9. Create a new monitor on https://uptimerobot.com/ on the link of your aforementioned website. Keep the other parameters at default values.
 
 🎇 Done! The bot is ready to use. 🎇
 
-Feel free to contact me if you have any questions :slightly_smiling_face:
 
-
-## :closed_lock_with_key: Environment Variables
+:closed_lock_with_key: Environment Variables
+-------------
 
 To run this project, you have to set up the following environment variables (the values below are exemplary).
 
@@ -86,7 +86,8 @@ To run this project, you have to set up the following environment variables (the
 `LOCAL_TIMEZONE=US/Eastern`
 
 
-## ❗ Commands
+❗ Commands
+-------------
 
 ```
 !remind me of X on 05.07.22 12:00
@@ -114,7 +115,9 @@ To run this project, you have to set up the following environment variables (the
 - Deletes a reminder
 
 
-## 🚀 Additional features
+🚀 Additional features
+-------------
+
 Besides the commands behaviour, the bot also:
 - validates user's profile (puts the user on a cooldown if needed),
 - validates message content,
@@ -132,11 +135,12 @@ Besides the commands behaviour, the bot also:
 - mentioning other users in advance.
 
 
-## :sos: Support
+:sos: Support
+-------------
 - <contact.bsski@gmail.com>
 
 
-## :construction_worker: Author
-
+:construction_worker: Author
+-------------
 - [@BSski](https://www.github.com/BSski)
 

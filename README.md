@@ -6,19 +6,16 @@
 </h3>
 
 <p align="center">
-  https://www.books-api-bsski.herokuapp.com
+  https://books-api-bsski.herokuapp.com/books/
 </p>
 
 
 
 <div markdown="1" align="center">
-
-old badges:
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/BSski/books-api/blob/main/LICENSE)
-
 done badges:
 [![Build Status](https://bsski.semaphoreci.com/badges/books-api/branches/main.svg?style=shields&key=bbf61a13-a31b-4766-99d2-8a8817119f9a)](https://bsski.semaphoreci.com/projects/books-api)
 [![Demo Uptime](https://img.shields.io/uptimerobot/ratio/7/m791716455-288255922d4aaa0af095c195)](https://books-api-bsski.herokuapp.com/)
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/BSski/books-api/blob/main/LICENSE)
 
 </div>
 
@@ -57,12 +54,12 @@ The recruitment task demanded such features and all are provided in a required f
 - accessing /books?sort=-published_date displays all stored books sorted by published date in descending order,
 - accessing /books?author=author1&author=author2 displays all stored books written by author1 and all stored books written by author2,
 - accessing /books/<book_id> displays details of a single book of id <book_id>,
-- sending a POST request to /db with a "q" keyword adds 10 books to the API's database; the books come from a query sent to the Google Books API with the passed keyword.
+- sending a POST request to /db with a "q" keyword adds 10 books to the API's database; the books come from a query sent to the Google Books API with the passed keyword; the feature updates all books that already were in the database.
 
 Furthermore, the API is deployed on Heroku from a Docker image using a CI/CD SemaphoreCI pipeline.
 
 <screen of the CI/CD>
-
+![Screenshot](https://i.imgur.com/sRgpdtM.png)
 
 ## :arrow_up: Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.

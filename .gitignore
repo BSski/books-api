@@ -335,4 +335,4 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 # Remove this after the app is production ready
-mysite/booksapi/migrations/
+api/books/migrations/

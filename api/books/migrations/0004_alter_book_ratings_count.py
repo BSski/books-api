@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('booksapi', '0003_alter_book_average_rating_alter_book_title'),
+        ('books', '0003_alter_book_average_rating_alter_book_title'),
     ]
 
     operations = [

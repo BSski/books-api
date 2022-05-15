@@ -1,4 +1,4 @@
-"""mysite URL Configuration
+"""api URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -22,5 +22,5 @@ admin.site.site_url = "/books/"
 
 urlpatterns = [
     path("2R7MFx6)Yc3Rd-W_+tTS5mXZQ8:/", admin.site.urls),
-    path("", include("booksapi.urls")),
+    path("", include("books.urls")),
 ]

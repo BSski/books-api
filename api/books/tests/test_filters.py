@@ -1,8 +1,8 @@
 from django.http import QueryDict
 from django.test import TestCase
 
-from booksapi.filters import AuthorSearchFilter
-from booksapi.models import Book
+from books.filters import AuthorSearchFilter
+from books.models import Book
 
 
 class AuthorSearchFilterTest(TestCase):

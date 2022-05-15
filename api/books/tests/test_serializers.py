@@ -2,7 +2,7 @@ from datetime import date
 
 from django.test import TestCase
 
-from booksapi.serializers import BookPostSerializer
+from books.serializers import BookPostSerializer
 
 
 class BookPostSerializerTest(TestCase):

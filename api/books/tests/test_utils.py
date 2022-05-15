@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from booksapi.utils import fetch_json_from_google_api
+from books.utils import fetch_json_from_google_api
 
 
 class UtilsTest(TestCase):

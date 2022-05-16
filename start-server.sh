@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-(cd api; python manage.py makemigrations; python manage.py migrate)
+(cd api; python manage.py makemigrations; python manage.py migrate; python manage.py collectstatic --no-input)
 
 if [ -n "$DJANGO_SUPERUSER_USERNAME" ] && [ -n "$DJANGO_SUPERUSER_PASSWORD" ] ; then
     (cd api; python manage.py createsuperuser --no-input)

@@ -38,6 +38,7 @@ DEBUG = os.environ.get("DEBUG", False)
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
+    "https://books-api-bsski.herokuapp.com/",
 ]
 
 
@@ -137,7 +138,7 @@ STATIC_URL = "/static/"
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "../../static"),)
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 

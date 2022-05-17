@@ -11,6 +11,7 @@
 [![Heroku](https://pyheroku-badge.herokuapp.com/?app=books-api-bsski&style=flat)](https://books-api-bsski.herokuapp.com/)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c69d9019a58cd920e18e/maintainability)](https://codeclimate.com/github/BSski/books-api/maintainability)
 [![CodeFactor](https://www.codefactor.io/repository/github/bsski/books-api/badge)](https://www.codefactor.io/repository/github/bsski/books-api)
+[![codecov](https://codecov.io/gh/BSski/books-api/branch/main/graph/badge.svg?token=1T80VR8JBB)](https://codecov.io/gh/BSski/books-api)
 
 </div>
 

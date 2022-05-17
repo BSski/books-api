@@ -38,7 +38,7 @@
 
 ## :scroll: Project description
 This is a project that was a previous recruitment task of mine. I fixed the points mentioned in the feedback and added dockerization, a CI/CD pipeline on SemaphoreCI, gunicorn, and changed hosting from pythonanywhere to heroku.
-The project is a books API. It provides a feature to upload books from Google Books API to the database, and browse them, either with filters or without them.
+The project is a books API: it provides a feature to upload books from Google Books API to the database, and browse them (with optional filters).
 
 
 ## :hammer: Technologies used

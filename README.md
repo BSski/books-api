@@ -1,5 +1,5 @@
 <p align="center">
-  <h2 align="center">Books API</h2>
+  <h2 align="center">Django Books API</h2>
 </p>
 
 

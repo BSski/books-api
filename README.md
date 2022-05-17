@@ -1,5 +1,5 @@
 <p align="center">
-  <h2 align="center">Books API</h2>
+  <h2 align="center">Django Books API</h2>
 </p>
 
 
@@ -38,7 +38,7 @@
 
 ## :scroll: Project description
 This is a project that was a previous recruitment task of mine. I fixed the points mentioned in the feedback and added dockerization, a CI/CD pipeline on SemaphoreCI, gunicorn, and changed hosting from pythonanywhere to heroku.
-The project is a books API. It provides a feature to upload books from Google Books API to the database, and browse them, either with filters or without them.
+The project is a books API: it provides a feature to upload books from Google Books API to the database, and browse them (with optional filters).
 
 
 ## :hammer: Technologies used
@@ -54,16 +54,16 @@ The project is a books API. It provides a feature to upload books from Google Bo
 
 ## :rocket: Features
 The recruitment task demanded such features and all are provided in a required format:
-- accessing /books displays all stored books,
-- accessing /books?published_date=1995 displays stored books published in a certain year,
-- accessing /books?sort=-published_date displays all stored books sorted by published date in descending order,
-- accessing /books?author=author1&author=author2 displays all stored books written by author1 and all stored books written by author2,
-- accessing /books/<book_id> displays details of a single book of id <book_id>,
-- sending a POST request to /db with a "q" keyword adds 10 books to the API's database; the books come from a query sent to the Google Books API with the passed keyword and the operation will update existing ones if there are such.
+- accessing `/books` displays all stored books,
+- accessing `/books?published_date=<year>` displays stored books published in a certain year,
+- accessing `/books?sort=-published_date` displays all stored books sorted by published date in descending order,
+- accessing `/books?author=<author1>&author=<author2>` displays all stored books written by _author1_ and all stored books written by _author2_,
+- accessing `/books/<book_id>` displays details of a single book of id _book_id_,
+- sending a POST request to `/db` with a `q` keyword adds 10 books to the API's database; the books come from a query sent to the Google Books API with the passed keyword and the operation will update existing books if there are such.
 
 Furthermore, the API is deployed on Heroku from a Docker image using a CI/CD SemaphoreCI pipeline:
 
-![CI/CD screenshot](https://i.imgur.com/sRgpdtM.png)
+![CI/CD screenshot](https://i.imgur.com/0NfYohr.png)
 
 
 ## :arrow_up: Room for improvement

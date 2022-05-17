@@ -40,6 +40,14 @@ blocks:
           commands:
             - pip install black
             - black --check api/
+        - name: Tests coverage badge
+          commands:
+            - cd api
+            - coverage run --source='books' manage.py test
+            - coverage xml
+            - 'curl -Os https://uploader.codecov.io/latest/linux/codecov'
+            - chmod +x codecov
+            - './codecov -t ${CODECOV_TOKEN}'
       env_vars:
         - name: DEBUG
           value: '0'
@@ -49,6 +57,8 @@ blocks:
           value: '1'
         - name: SESSION_COOKIE_SECURE
           value: '1'
+        - name: CODECOV_TOKEN
+          value: 567ce88c-a019-4a5e-a567-a021fc9fa176
 promotions:
   - name: Dockerize
     pipeline_file: pipeline_2.yml

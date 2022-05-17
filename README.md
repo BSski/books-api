@@ -63,7 +63,7 @@ The recruitment task demanded such features and all are provided in a required f
 
 Furthermore, the API is deployed on Heroku from a Docker image using a CI/CD SemaphoreCI pipeline:
 
-![CI/CD screenshot](https://i.imgur.com/sRgpdtM.png)
+![CI/CD screenshot](https://i.imgur.com/iwb8Jju.png)
 
 
 ## :arrow_up: Room for improvement

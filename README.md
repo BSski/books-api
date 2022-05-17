@@ -9,6 +9,8 @@
 [![Demo Uptime](https://img.shields.io/uptimerobot/ratio/7/m791716455-288255922d4aaa0af095c195)](https://books-api-bsski.herokuapp.com/)
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/BSski/books-api/blob/main/LICENSE)
 [![Heroku](https://pyheroku-badge.herokuapp.com/?app=books-api-bsski&style=flat)](https://books-api-bsski.herokuapp.com/)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c69d9019a58cd920e18e/maintainability)](https://codeclimate.com/github/BSski/books-api/maintainability)
+[![CodeFactor](https://www.codefactor.io/repository/github/bsski/books-api/badge)](https://www.codefactor.io/repository/github/bsski/books-api)
 
 </div>
 

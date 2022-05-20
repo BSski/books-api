@@ -12,6 +12,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/c69d9019a58cd920e18e/maintainability)](https://codeclimate.com/github/BSski/books-api/maintainability)
 [![CodeFactor](https://www.codefactor.io/repository/github/bsski/books-api/badge)](https://www.codefactor.io/repository/github/bsski/books-api)
 [![codecov](https://codecov.io/gh/BSski/books-api/branch/main/graph/badge.svg?token=1T80VR8JBB)](https://codecov.io/gh/BSski/books-api)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 </div>
 
@@ -38,7 +39,7 @@
 
 ## :scroll: Project description
 This is a project that was a previous recruitment task of mine. I fixed the points mentioned in the feedback and added dockerization, a CI/CD pipeline on SemaphoreCI, gunicorn, and changed hosting from pythonanywhere to heroku.
-The project is a books API: it provides a feature to upload books from Google Books API to the database, and browse them (with optional filters).
+The project is a books API: it provides a feature to upload books from Google Books API to the database and browse them (with optional filters).
 
 
 ## :hammer: Technologies used

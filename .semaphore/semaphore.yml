@@ -57,8 +57,6 @@ blocks:
           value: '1'
         - name: SESSION_COOKIE_SECURE
           value: '1'
-        - name: CODECOV_TOKEN
-          value: 567ce88c-a019-4a5e-a567-a021fc9fa176
 promotions:
   - name: Dockerize
     pipeline_file: pipeline_2.yml

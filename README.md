@@ -6,13 +6,14 @@
 <div markdown="1" align="center">
 
 [![Build Status](https://bsski.semaphoreci.com/badges/books-api/branches/main.svg?style=shields&key=bbf61a13-a31b-4766-99d2-8a8817119f9a)](https://bsski.semaphoreci.com/projects/books-api)
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/BSski/books-api/blob/main/LICENSE)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c69d9019a58cd920e18e/maintainability)](https://codeclimate.com/github/BSski/books-api/maintainability)
 [![CodeFactor](https://www.codefactor.io/repository/github/bsski/books-api/badge)](https://www.codefactor.io/repository/github/bsski/books-api)
 [![codecov](https://codecov.io/gh/BSski/books-api/branch/main/graph/badge.svg?token=1T80VR8JBB)](https://codecov.io/gh/BSski/books-api)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 <!-- [![Demo Uptime](https://img.shields.io/uptimerobot/ratio/7/m791716455-288255922d4aaa0af095c195)](https://books-api-bsski.herokuapp.com/) -->
 <!-- [![Heroku](https://pyheroku-badge.herokuapp.com/?app=books-api-bsski&style=flat)](https://books-api-bsski.herokuapp.com/)  -->
+
+<!-- [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/BSski/books-api/blob/main/LICENSE) -->
 
 </div>
 

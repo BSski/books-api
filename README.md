@@ -5,7 +5,7 @@
 
 <div markdown="1" align="center">
 
-[![Build Status](https://bsski.semaphoreci.com/badges/books-api/branches/main.svg?style=shields&key=bbf61a13-a31b-4766-99d2-8a8817119f9a)](https://bsski.semaphoreci.com/projects/books-api)
+![Build Status](https://bsski.semaphoreci.com/badges/books-api/branches/main.svg?style=shields&key=bbf61a13-a31b-4766-99d2-8a8817119f9a)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c69d9019a58cd920e18e/maintainability)](https://codeclimate.com/github/BSski/books-api/maintainability)
 [![CodeFactor](https://www.codefactor.io/repository/github/bsski/books-api/badge)](https://www.codefactor.io/repository/github/bsski/books-api)
 [![codecov](https://codecov.io/gh/BSski/books-api/branch/main/graph/badge.svg?token=1T80VR8JBB)](https://codecov.io/gh/BSski/books-api)

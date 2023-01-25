@@ -26,10 +26,11 @@
   <b>[Heroku retracted its free tier, therefore all my demos are unavailable until further notice.]</b>
 </p>
 
+<!--
 <p align="center">
   https://books-api-bsski.herokuapp.com/
 </p>
-
+-->
 
 
 ## Table of contents
